@@ -8,7 +8,6 @@ Group:		Applications/Text
 Source0:	http://www.alcyone.com/software/empy/%{name}-%{version}.tar.gz
 # Source0-md5:	e7b518a6fc4fd28fef87726cdb003118
 URL:		http://www.alcyone.com/software/empy/
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
