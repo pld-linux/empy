@@ -1,5 +1,4 @@
 
-%include	/usr/lib/rpm/macros.python
 
 Summary:	System for embedding Python expressions and statements in template text
 Summary(pl):	System wbudowywania wyra¿eñ jêzyka Python w pliki tekstowe
