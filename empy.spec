@@ -8,9 +8,9 @@ Version:	3.1.1
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://www.alcyone.com/pyos/empy/%{name}-%{version}.tar.gz
+Source0:	http://www.alcyone.com/software/empy/%{name}-%{version}.tar.gz
 # Source0-md5:	252ace7ecf6e9c210f29a4c38ed742e8
-URL:		http://www.alcyone.com/pyos/empy/
+URL:		http://www.alcyone.com/software/empy/
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildArch:	noarch
