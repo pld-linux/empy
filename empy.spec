@@ -4,7 +4,7 @@
 Summary:	System for embedding Python expressions and statements in template text
 Summary(pl):	System wbudowywania wyra¿eñ jêzyka Python w pliki tekstowe
 Name:		empy
-Version:	1.5.1
+Version:	2.0
 Release:	1
 License:	GPL
 Group:		Applications/Text
