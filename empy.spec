@@ -4,12 +4,12 @@
 Summary:	System for embedding Python expressions and statements in template text
 Summary(pl):	System wbudowywania wyra¿eñ jêzyka Python w pliki tekstowe
 Name:		empy
-Version:	3.1.1
+Version:	3.2
 Release:	1
-License:	GPL
+License:	LGPL
 Group:		Applications/Text
 Source0:	http://www.alcyone.com/software/empy/%{name}-%{version}.tar.gz
-# Source0-md5:	252ace7ecf6e9c210f29a4c38ed742e8
+# Source0-md5:	85c1681097b12e32a5b2efd0bbdf3652
 URL:		http://www.alcyone.com/software/empy/
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
