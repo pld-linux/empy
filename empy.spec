@@ -9,6 +9,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.alcyone.com/pyos/empy/%{name}-%{version}.tar.gz
+# Source0-md5:	c3a114a9e412f9420b7c45de3708ecf8
 URL:		http://www.alcyone.com/pyos/empy/
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
