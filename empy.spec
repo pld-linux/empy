@@ -4,12 +4,12 @@
 Summary:	System for embedding Python expressions and statements in template text
 Summary(pl):	System wbudowywania wyra¿eñ jêzyka Python w pliki tekstowe
 Name:		empy
-Version:	3.0.2
+Version:	3.0.3
 Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.alcyone.com/pyos/empy/%{name}-%{version}.tar.gz
-# Source0-md5:	f1f8e84f2c1d076af983d0a57d96fb8b
+# Source0-md5:	8c9c4721b76713301a28aabfe7a4cbc2
 URL:		http://www.alcyone.com/pyos/empy/
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
@@ -34,6 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_bindir}}
 
 python setup.py install \
+	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
 
 cat > $RPM_BUILD_ROOT%{_bindir}/em.py <<"EOF"
@@ -41,9 +42,6 @@ cat > $RPM_BUILD_ROOT%{_bindir}/em.py <<"EOF"
 import em
 em.invoke(sys.argv[1:])
 EOF
-
-%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
-%py_comp $RPM_BUILD_ROOT%{py_sitedir}
 
 rm -f $RPM_BUILD_ROOT%{py_sitedir}/*.py
 
