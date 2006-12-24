@@ -8,6 +8,8 @@ Group:		Applications/Text
 Source0:	http://www.alcyone.com/software/empy/%{name}-%{version}.tar.gz
 # Source0-md5:	e7b518a6fc4fd28fef87726cdb003118
 URL:		http://www.alcyone.com/software/empy/
+BuildRequires:	python >= 1:2.5
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,7 +41,7 @@ import em
 em.invoke(sys.argv[1:])
 EOF
 
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/*.py
+rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/*.py
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,5 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README *.em doc
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/em.py
 %{py_sitescriptdir}/*.py[co]
+%{py_sitescriptdir}/empy-*.egg-info
