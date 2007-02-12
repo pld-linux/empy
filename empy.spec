@@ -1,5 +1,5 @@
 Summary:	System for embedding Python expressions and statements in template text
-Summary(pl.UTF-8):   System wbudowywania wyrażeń języka Python w pliki tekstowe
+Summary(pl.UTF-8):	System wbudowywania wyrażeń języka Python w pliki tekstowe
 Name:		empy
 Version:	3.3
 Release:	3
