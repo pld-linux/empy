@@ -2,7 +2,7 @@ Summary:	System for embedding Python expressions and statements in template text
 Summary(pl.UTF-8):	System wbudowywania wyrażeń języka Python w pliki tekstowe
 Name:		empy
 Version:	3.3
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Applications/Text
 Source0:	http://www.alcyone.com/software/empy/%{name}-%{version}.tar.gz
