@@ -10,6 +10,7 @@ Source0:	http://www.alcyone.com/software/empy/%{name}-%{version}.tar.gz
 URL:		http://www.alcyone.com/software/empy/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,13 +26,13 @@ System wbudowywania wyrażeń języka Python w pliki tekstowe.
 %setup -q
 
 %build
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_bindir}}
 
-python setup.py install \
+%{__python} setup.py install \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
 
@@ -41,7 +42,7 @@ import em
 em.invoke(sys.argv[1:])
 EOF
 
-rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/*.py
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
