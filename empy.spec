@@ -26,15 +26,13 @@ System wbudowywania wyrażeń języka Python w pliki tekstowe.
 %setup -q
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_bindir}}
 
-%{__python} setup.py install \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 cat > $RPM_BUILD_ROOT%{_bindir}/em.py <<"EOF"
 #!/usr/bin/python
